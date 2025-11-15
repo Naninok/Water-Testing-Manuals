@@ -4,87 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Water Testing Manuals</title>
+
 <style>
+  :root{
+    --veolia-red: #d71920;
+    --bg-light: #f2f2f2;
+    --text-dark: #002b45;
+    --card-shadow: rgba(0,0,0,0.12);
+  }
+
   body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eef6fb;
+    background-color: var(--bg-light);
   }
 
+  /* ---------------- HEADER ---------------- */
   header {
-    background-color: #007acc;
+    background: linear-gradient(135deg, #f2f2f2 0%, #963939 50%, #d41313 100%);
     color: white;
     padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.28);
   }
 
+  header img {
+    height: 46px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,0.4));
+  }
+
+  .header-title {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+  }
+
+  /* ---------------- CARDS ---------------- */
   .container {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    overflow-y: auto;
-    max-height: calc(100vh - 80px); /* header height */
+    padding: 22px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
   .card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 15px;
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    gap: 18px;
+    box-shadow: 0 4px 10px var(--card-shadow);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: 0.25s ease;
+    border: 1px solid #e4e4e4;
   }
 
   .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    border-color: #d71920;
   }
 
   .icon {
-    width: 50px;
-    height: 50px;
-    background-color: #007acc;
+    width: 55px;
+    height: 55px;
+    background: #d71920;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     flex-shrink: 0;
   }
 
   .card-title {
     font-size: 18px;
     font-weight: bold;
-    color: #004080;
+    color: var(--text-dark);
+    letter-spacing: 0.3px;
   }
 
 </style>
 </head>
 <body>
 
-<header>Water Testing Manuals</header>
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Veolia_logo.svg/1024px-Veolia_logo.svg.png" alt="Veolia Logo">
+  <div class="header-title">Water Testing Manuals</div>
+</header>
 
 <div class="container">
-  <div class="card" onclick="window.open('https://drive.google.com/file/d/1U-o6c7AtcFKeNOvdxgIfaPaaxsbNow3p/view?usp=sharing', '_blank')">
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1U-o6c7AtcFKeNOvdxgIfaPaaxsbNow3p/view?usp=sharing')">
     <div class="icon">Si</div>
     <div class="card-title">Silica HR</div>
   </div>
 
-  <div class="card" onclick="window.open('https://drive.google.com/file/d/1h5yopYaOfYUi5nZG-SFTzAZhJnnB13r1/view?usp=sharing', '_blank')">
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1qzlIVf7xRPmuCjpcLduKzAFcp8Orx48X/view?usp=sharing')">
+    <div class="icon">Si</div>
+    <div class="card-title">Silica LR</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1qzlIVf7xRPmuCjpcLduKzAFcp8Orx48X/view?usp=sharing')">
+    <div class="icon">Si</div>
+    <div class="card-title">Silica ULR</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1osPdAUYAi-LXro22yFrNptD-1W0ocu9t/view?usp=sharing')">
+    <div class="icon">Fe</div>
+    <div class="card-title">Iron FerroVer</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/11dNnx1ZtawAPWiWsQN9DmzHibYzciHxt/view?usp=sharing')">
+    <div class="icon">Fe</div>
+    <div class="card-title">Iron FerroZine</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1y5UTcedRF8d2BpBvPuOcOULDmxDNsrS4/view?usp=sharing')">
+    <div class="icon">S</div>
+    <div class="card-title">SulfaVer</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1h5yopYaOfYUi5nZG-SFTzAZhJnnB13r1/view?usp=sharing')">
     <div class="icon">P</div>
     <div class="card-title">Phosphate</div>
   </div>
 
-  <!-- เพิ่มการ์ดอื่น ๆ ได้ตรงนี้ -->
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/10rOmEeLgVPacQpkYZ1mHjNrC0sr3lsQi/view?usp=sharing')">
+    <div class="icon">ST</div>
+    <div class="card-title">STP</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1r2Ev2M8iY38cCuWos0QxNmTE9uuO_jWK/view?usp=sharing')">
+    <div class="icon">OS</div>
+    <div class="card-title">Oxygen Scavengers</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/19IVcmboDOE3HXLzVVJ_ThCWjLF0NAbzF/view?usp=sharing')">
+    <div class="icon">Zn</div>
+    <div class="card-title">ZincoVer</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1uVp3oaXhRscUkAZjbtrWOLX3tqUMKq3R/view?usp=sharing')">
+    <div class="icon">NT</div>
+    <div class="card-title">Nitrite HR</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1pcWo165OhPC-lx2B1iP3rSREOBfzsy1q/view?usp=sharing')">
+    <div class="icon">Al</div>
+    <div class="card-title">Aluminium</div>
+  </div>
+
+  <div class="card" onclick="window.open('https://drive.google.com/file/d/1fa-SncD8wlTcQz3uhFm4wnDXAnEoySD6/view?usp=sharing')">
+    <div class="icon">Cu</div>
+    <div class="card-title">Copper</div>
+  </div>
+
 </div>
 
 </body>
